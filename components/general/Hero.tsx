@@ -1,8 +1,9 @@
 import { Terminal, Code, ArrowRight, Book, CheckCircle2, Shield, Star } from "lucide-react";
+import StatsOverview from "./StatsOverview";
 
 const Hero = () => {
   return (
-    <section className="w-full px-4 pt-32 pb-20 bg-white dark:bg-slate-900">
+    <section className="w-full px-4 pt-10 pb-20 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           {/* Badges */}
@@ -61,12 +62,14 @@ const Hero = () => {
           </div>
         </div>
         {/* Illustration */}
-        <div className="relative">
-          <img
+        <div >
+
+          <StatsOverview/>
+          {/* <img
             src="https://illustrations.popsy.co/white/developer.svg"
             alt="Developer illustration"
             className="w-full"
-          />
+          /> */}
         </div>
       </div>
     </section>
