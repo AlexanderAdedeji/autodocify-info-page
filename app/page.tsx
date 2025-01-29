@@ -1,5 +1,6 @@
 import CommunitySection from "@/components/general/CommunitySection";
 import EnterpriseSecurity from "@/components/general/EnterpriseSecurity";
+import FeaturesSection from "@/components/general/Features";
 import Hero from "@/components/general/Hero";
 import TrustedBySection from "@/components/general/TrustedBy";
 import WhyChooseAutoDocify from "@/components/general/WhyChooseAutodocify";
@@ -15,6 +16,8 @@ export default function Home() {
 
       <EnterpriseSecurity />
       <CommunitySection/>
+
+      <FeaturesSection/>
     </>
   );
 }
