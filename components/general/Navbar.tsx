@@ -46,7 +46,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex gap-2">
             <Link
-              href=""
+              href="https://github.com/grayStone-Inc/autodocify-cli"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
