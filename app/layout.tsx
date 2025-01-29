@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Navbar from "@/components/general/Navbar";
+import { cn } from "@/lib/utils";
+import { ScrollToTop } from "@/components/general/ScrollToTop";
+import Hero from "@/components/general/Hero";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,19 +28,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-
-          {children}
+    <html lang="en" suppressHydrationWarning>
+ <body className="min-h-screen bg-background font-sans antialiased">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="relative flex min-h-screen flex-col">
+            <Navbar />
+            <div className="flex-1">{children}</div>
+            <ScrollToTop />
+          </div>
         </ThemeProvider>
       </body>
     </html>
