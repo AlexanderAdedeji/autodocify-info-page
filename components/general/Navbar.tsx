@@ -25,7 +25,7 @@ const Navbar = () => {
 
           {/* mobile */}
           <div className="flex md:hidden">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <MobileNavFragment />
           </div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
               Get Started
             </Link>
 
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
         </NavigationMenuList>
       </NavigationMenu>

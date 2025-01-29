@@ -1,3 +1,5 @@
+'use client'
+
 import CommunitySection from "@/components/general/CommunitySection";
 import EnterpriseSecurity from "@/components/general/EnterpriseSecurity";
 import FeaturesSection from "@/components/general/primeFeatures";
@@ -10,6 +12,8 @@ import { Features } from "@/components/general/Features";
 import DeveloperTestimonials from "@/components/general/DeveloperTestimonials";
 import WhyAutoDocify from "@/components/general/WhyAutoDocify";
 import Services from "@/components/general/Services";
+import StayUpdated from "@/components/general/StayUpdated";
+import FAQSection from "@/components/general/FAQ";
 
 export default function Home() {
   return (
@@ -32,6 +36,10 @@ export default function Home() {
       <WhyAutoDocify/>
 
       <Services/>
+
+      <StayUpdated/>
+
+      <FAQSection/>
 
       </>
   );
