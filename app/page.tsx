@@ -14,6 +14,7 @@ import WhyAutoDocify from "@/components/general/WhyAutoDocify";
 import Services from "@/components/general/Services";
 import StayUpdated from "@/components/general/StayUpdated";
 import FAQSection from "@/components/general/FAQ";
+import TimelineSection from "@/components/general/TimeLine";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
       <WhyAutoDocify/>
 
       <Services/>
-
+<TimelineSection/>
       <StayUpdated/>
 
       <FAQSection/>
