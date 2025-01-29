@@ -1,64 +1,90 @@
-import { FileText, FileCode2, TestTube, FileJson } from "lucide-react";
 
-const features = [
+
+import image from "../../assets/growth.png";
+import image3 from "../../assets/reflecting.png";
+import image4 from "../../assets/looking-ahead.png";
+import Image, { StaticImageData } from "next/image";
+import { Badge } from "../ui/badge";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
+
+interface FeatureProps {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
+const features: FeatureProps[] = [
   {
-    icon: <FileText className="w-12 h-12 text-blue-600 mb-4" />,
-    title: "README Generation",
+    title: "Multi-Platform Support",
     description:
-      "Generate comprehensive README files automatically from your codebase.",
+"Download videos from all major social platforms including YouTube, Instagram, TikTok, and Facebook. One tool for all your video downloading needs.",
+    image: image4,
   },
   {
-    icon: <FileCode2 className="w-12 h-12 text-blue-600 mb-4" />,
-    title: "Technical Docs",
+    title: "Advanced Watermark Removal",
     description:
-      "Create detailed technical documentation with architecture insights.",
+    "Our AI-powered watermark removal technology ensures clean, professional-looking videos. Choose between automatic detection or precise manual control.",
+    image: image3,
   },
   {
-    icon: <TestTube className="w-12 h-12 text-blue-600 mb-4" />,
-    title: "Test Generation",
+    title: "Premium Quality Downloads",
     description:
-      "Auto-generate test files with comprehensive test cases.",
-  },
-  {
-    icon: <FileJson className="w-12 h-12 text-blue-600 mb-4" />,
-    title: "Swagger Docs",
-    description:
-      "Generate Swagger documentation for your APIs automatically.",
+    "Get the highest quality downloads available, up to 4K resolution. Multiple format options including MP4 video and MP3 audio conversion.",
+    image: image,
   },
 ];
 
-const FeaturesSection = () => {
+const featureList: string[] = [
+  "4K Quality",
+  "Batch Downloads",
+  "MP3 Conversion",
+  "No Watermarks",
+  "Multiple Formats",
+  "Fast Downloads",
+  "Cloud Storage",
+  "Progress Tracking",
+  "Browser Extension",
+];
+
+export const Features = () => {
   return (
-    <section id="features" className="w-full px-4 py-20 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-            Powerful Features
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Everything you need to create and maintain beautiful documentation
-            for your projects.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="p-8 rounded-xl border dark:border-gray-700 hover:dark:border-gray-600 dark:bg-gray-800 hover:shadow-lg transition-all"
-            >
-              {feature.icon}
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section id="features" className="container py-24 sm:py-32 space-y-8">
+      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
+        Many{" "}
+        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          Great Features
+        </span>
+      </h2>
+
+      <div className="flex flex-wrap md:justify-center gap-4">
+        {featureList.map((feature: string) => (
+          <div key={feature}>
+            <Badge variant="secondary" className="text-sm">
+              {feature}
+            </Badge>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map(({ title, description, image }: FeatureProps) => (
+          <Card key={title}>
+            <CardHeader>
+              <CardTitle>{title}</CardTitle>
+            </CardHeader>
+
+            <CardContent>{description}</CardContent>
+
+            <CardFooter>
+              <Image
+                src={image}
+                alt="About feature"
+                className="w-[200px] lg:w-[300px] mx-auto"
+              />
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </section>
   );
 };
-
-export default FeaturesSection;
