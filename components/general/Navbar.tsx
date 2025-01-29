@@ -8,7 +8,7 @@ import {
 } from "../ui/navigation-menu";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
-import { GitBranchIcon, GithubIcon } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 import { navbarLinksList, NavProps } from "@/config/nav";
 
 const Navbar = () => {
