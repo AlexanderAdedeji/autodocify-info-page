@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Features } from "@/components/general/Features";
 import DeveloperTestimonials from "@/components/general/DeveloperTestimonials";
 import WhyAutoDocify from "@/components/general/WhyAutoDocify";
+import Services from "@/components/general/Services";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
       <DeveloperTestimonials/>
 
       <WhyAutoDocify/>
+
+      <Services/>
 
       </>
   );
