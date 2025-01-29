@@ -18,11 +18,15 @@ const Hero = () => {
           </div>
           {/* Main Heading */}
           <h1 className="text-5xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
-            All the Videos. All in one place. Made for content lovers and creators.
+          {/* Save 20+ Hours Monthly on Documentation */}
+
+          Automate Your Code Documentation with AI 🚀
           </h1>
           {/* Subheading */}
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Get real-time pricing insights, product info, and more. It's like your Bloomberg Terminal for the sneaker market.
+          AutoDocify CLI transforms your code into structured, professional documentation in seconds. Ideal for open-source projects, startups, and enterprise teams.
+
+          {/* AutoDocify uses advanced AI to analyze your codebase and generate comprehensive documentation in seconds. Join 50,000+ developers who trust us. */}
           </p>
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
