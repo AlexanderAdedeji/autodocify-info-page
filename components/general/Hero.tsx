@@ -35,7 +35,7 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <a
-              href="https://pypi.org/project/autodocify"
+              href="https://pypi.org/project/autodocify-cli"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-gray-300 dark:border-gray-600 px-8 py-3 rounded-lg text-lg font-medium hover:border-gray-400 dark:hover:border-gray-500 transition-colors flex items-center justify-center"
